@@ -419,7 +419,6 @@ int BullsAndCows(int randnum, int num = 1) {
 				if (i == j) {
 					if (dig_num == dig_rand) {
 						cows ++;
-						bulls++;
 					}
 				}
 				else {
