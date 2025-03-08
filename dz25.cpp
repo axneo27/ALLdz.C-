@@ -106,14 +106,14 @@ void e7() {
 
 void e8() {
     array<int, 8> arr = { 10, -1,-2,-3,4,5,-6,1213 };
-    array<int, 8> arr2 = {0};
+    for_each(arr.begin(), arr.end(), [](int& a) {cout << a << " "; });
+    cout << endl;
 
-    transform(arr.begin(), arr.end(), arr2.begin(), [](int v) {
+    transform(arr.begin(), arr.end(), arr.begin(), [](int& v) {
         return v < 0 ? v *= -1 : v;
     });
     for_each(arr.begin(), arr.end(), [](int& a) {cout << a << " "; });
     cout << endl;
-    for_each(arr2.begin(), arr2.end(), [](int& a) {cout << a << " "; });
 } 
 
 void e9() {
